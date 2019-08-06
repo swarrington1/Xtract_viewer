@@ -55,7 +55,8 @@ thr=""
 brain=""
 
 # the colourmap options
-cmaps=(blue red green blue-lightblue pink red-yellow cool yellow copper hot pass)
+cmaps=(blue red green blue-lightblue pink red-yellow cool yellow copper \
+ hot hsv coolwarm spring summer winter Oranges)
 cL="${#cmaps[@]}" # length of array for colourmap loop control
 
 # Parse command-line arguments
