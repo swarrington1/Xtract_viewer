@@ -55,7 +55,7 @@ thr=""
 brain=""
 
 # the colourmap options
-cmaps=(blue red green blue-lightblue pink red-yellow cool yellow copper hot hsv)
+cmaps=(blue red green blue-lightblue pink red-yellow cool yellow copper hot pass)
 cL="${#cmaps[@]}" # length of array for colourmap loop control
 
 # Parse command-line arguments
@@ -156,7 +156,7 @@ fi
 i=0
 for tract in "${strlist[@]}"
 do
-  if [ $i -gt $cL ]; then i=0; fi # control colourmap loop
+  if [ $i -gt $((cL - 1)) ]; then i=0; fi # control colourmap loop
   # check tract exists
   if [ ! -f "${dir}/${preT}/${tract}${postT}" ]; then
     echo "Couldn't find ${tract} image."
@@ -187,4 +187,5 @@ done
 
 #echo $cmd
 echo "Launching FSLeyes..."
-bash $cmd &
+#bash $cmd &
+echo $cmd
