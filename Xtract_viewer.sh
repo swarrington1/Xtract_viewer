@@ -187,5 +187,5 @@ done
 
 #echo $cmd
 echo "Launching FSLeyes..."
-#bash $cmd &
-echo $cmd
+bash $cmd &
+#echo $cmd
