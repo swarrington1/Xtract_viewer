@@ -2,7 +2,6 @@
 # Script to view output of Xtract in fsleyes
 # Written by Shaun Warrington 07/2019
 
-
 Usage() {
     cat << EOF
 
@@ -28,7 +27,7 @@ Usage:
        -thr <number> <number>            The lower and upper thresholds applied to the tracts for viewing
                                          Default for subject = 0.001 0.1, default for atlas = 0.3 1.0
 
-       -brain                            The brain image to use for the background overlay
+       -brain                            The brain image to use for the background overlay - must be in the same space as tracts.
                                          Default is the FSL_HCP065_FA map
 EOF
     exit 1
